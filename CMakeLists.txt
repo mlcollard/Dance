@@ -17,3 +17,15 @@ add_custom_target(run
     USES_TERMINAL
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
+
+# install
+install(PROGRAMS $<TARGET_FILE:dance> TYPE BIN)
+
+# run fast
+add_custom_target(run_fast
+    COMMENT "Fast Dance"
+    COMMAND $<TARGET_FILE:dance> 100
+    DEPENDS dance
+    USES_TERMINAL
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+)
