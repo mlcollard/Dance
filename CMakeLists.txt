@@ -12,7 +12,7 @@ target_compile_features(dance PRIVATE cxx_std_17)
 # run
 add_custom_target(run
     COMMENT "Dance"
-    COMMAND ./dance
+    COMMAND $<TARGET_FILE:dance>
     DEPENDS dance
     USES_TERMINAL
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
