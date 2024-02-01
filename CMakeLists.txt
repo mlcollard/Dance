@@ -6,3 +6,4 @@ project(Dance)
 
 add_executable(dance)
 target_sources(dance PRIVATE dance.cpp)
+target_compile_features(dance PRIVATE cxx_std_17)
